@@ -13,7 +13,8 @@ public class Conexion {
     private static final String userName = "root";
     private static final String password = "";
     
-    public Conexion() {
+    @SuppressWarnings("deprecation")
+	public Conexion() {
 		try {
 			Class.forName(driver).newInstance();
 			con = (Connection)DriverManager.getConnection(url+dbName,userName,password);
